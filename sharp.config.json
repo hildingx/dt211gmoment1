@@ -1,0 +1,9 @@
+{
+    "jpg": {
+        "quality": 75,
+        "progressive": true
+    },
+    "webp": {
+        "nearLossless": true
+    }
+}
