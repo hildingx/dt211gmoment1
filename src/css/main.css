@@ -95,6 +95,7 @@ main img {
     border-width: 1px;
     border-style: solid;
     margin: 20px 0;
+    width: 100%;
 }
 
 /*          PROCESS          */
