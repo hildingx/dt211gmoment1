@@ -20,7 +20,47 @@
     <main>
         <div class="box work">
             <h1>Beskrivning av arbetsprocessen</h1>
-            <p>Här kommer arbetsprocessen beskrivas.</p>
+            <p>Projektet initierades genom att skapa en katalog för mitt projekt. Där skapades ett npm-projekt 
+                genom "npm init" i konsolen. I (root) katalogen skapades då en json-fil som indikerar att det är 
+                ett npm-projekt. Sedan installerades Parcel som är ett system för automatisering av arbetsprocessen. 
+                Detta gjordes med kommando npm install parcel --save-dev (save dev flaggar att det är ett 
+                utvecklingsprojekt och används bara för utveckling). I rot skapades en src-mapp för arbetsfilerna. 
+                Detta angavs sedan i package.json som source. Script för start och build lades in i 
+                ("start": "parcel", "build": "parcel build") där start kör parcel så att det kan köras som en live-server 
+                och build paketerar ihop webbplatsen och gör den färdig för publicering.
+                <br>
+                <br>
+                Därefter skapades ett git-repo som publicerades till github. Repot knöts sedan till Netlify för publicering. 
+                I git-ignore lades node_modules/, dist/, .parcel-cache/ till eftersom dessa inte behövs i repot. 
+                I Netlify skrevs ”npm run build” under build command så att vid varje push körs run build för parcel vilket 
+                skapar en katalog ”dist” där publiceringsfilerna hamnar. 
+                <br>
+                <br>
+                Provade att köra med branches med en branch för development och en för main. Hade lite svårigheter att få det 
+                att fungera och superläskigt att merg'a ihop sen. Men det gick bra tillslut.
+                <br>
+                <br>
+                Sedan skapades webbplatsen med tre undersidor. En förstasida, en sida med bilder och en sida med beskrivning av arbetsprocessen. 
+                Sidorna stylades med CSS och en liten klocka lades till med javascript för att se så att js-funktionaliteten fungerar. 
+                I &lt;head&gt; lades type=”module” in under &lt;script src=”js/main.js”&gt; där module indikerar att main.js ska hanteras 
+                som en ECMAScript modul vilket är standard för importering och exportering av js-kod på ett modulärt vis.  
+                <br>
+                <br>
+                Med parcel minifieras HTML, CSS och JS automatiskt, så även transpilering av JS.
+                Optimering av bilder är gjort med ”?as=webp&width=600” direkt i elementet för picture source samt ”?width=600” i elementet img. 
+                Ytterligare optimering gjordes sedan i sharp.config.json där bildkvalitet för jpg och webp bestämdes. 
+                <br>
+                <br>
+                "browserslist": "> 0.5%, last 2 versions, not dead" adderades till packade.json vilket betyder att den har stöd 
+                till 99,5% av alla webläsare som används just nu (och som inte är döda).
+                <br>
+                <br>
+                Arbetsfiler som ligger under /src kopieras och blir publiceringsfiler till /dist vid publicering. Kommando "npm run build" körs via netlify.
+                <br>
+                <br>
+                Vid ändring och publicering krävs sedan bara att spara de ändringar som gjorts i vscode och git commit / push så sparas repot globalt på github, 
+                som sedan läses av Netlify där npm run build körs vilket gör att de senaste ändringarna publiceras automatiskt.     
+            </p>
         </div>
     </main>
     <footer>
