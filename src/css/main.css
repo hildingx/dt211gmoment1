@@ -90,7 +90,7 @@ main p {
 
 /*          PHOTOS          */
 
-main img {
+main picture {
     border-color: #000000;
     border-width: 1px;
     border-style: solid;
