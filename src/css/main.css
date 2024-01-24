@@ -11,7 +11,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Use viewport height to ensure full height */
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -34,7 +34,7 @@ nav ul {
 }
 
 nav li {
-    margin: 20px 10px;
+    margin: 20px 0px;
 }
 
 nav a {
@@ -112,7 +112,8 @@ footer {
 
 .footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     width: 80%;
     max-width: 600px;
     margin: auto;
